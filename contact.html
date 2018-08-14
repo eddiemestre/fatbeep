@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>Fat Beep</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./styleform.css">
+    <link rel="shortcut icon" href="./icon.ico">
+  </head>
+
+
+  <body id="contactpage">
+
+  <div class="grid">
+
+    <!-- first column, navigation -->
+    <div class="nav">
+
+        <!-- mobile navigation -->
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./artists.html">ARTISTS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+          <li><a href="https://www.youtube.com/channel/UCr6eoRY1tYpMiwxpqCjtiyA" target="_blank">YOUTUBE</a></li>
+        </ul>
+
+        <!-- standard navigation -->
+        <div class="yo rotate"><a href="https://www.youtube.com/channel/UCr6eoRY1tYpMiwxpqCjtiyA" target="_blank"><h1>YOUTUBE</h1></a></div>
+        <div class="co rotate"><a href="./contact.html"><h1>CONTACT</h1></a></div>
+        <div class="ar rotate"><a href="./artists.html"><h1>ARTISTS</h1></a></div>
+        <div class="ab rotate"><a href="./about.html"><h1>ABOUT</h1></a></div>
+        <div class="ho rotate"><a href="./index.html"><h1>HOME</h1></a></div>
+
+    </div>
+
+    <!-- second column, information -->
+    <div class="info">
+
+      <!-- logo -->
+      <div class="fbimage">
+        <img src="./logo.jpg">
+      </div>
+
+      <!-- contact info -->
+      <!--source code by Rex Kirby https://codepen.io/rexkirby/ -->
+      <div id="form-main">
+        <div id="form-div">
+
+          <form class="form" id="form1" method="post" action="send_form_email.php">
+
+            <p class="name">
+              <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+            </p>
+
+            <p class="email">
+              <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+            </p>
+
+            <p class="text">
+              <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+            </p>
+
+            <div class="submit">
+              <input type="submit" value="Submit" id="button-blue"/>
+              <div class="ease"></div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!--third column, timer -->
+    <div class="time">
+
+        <div class="ti clockwise"><a href="#"><h1><time>00:00:00</time></h1></a></div>
+
+    </div>
+
+  </div>
+
+    <script src="./main.js"></script>
+
+  </body>
+
+</html>

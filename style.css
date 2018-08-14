@@ -1,0 +1,356 @@
+/* general body stuff and set background color */
+body {
+  background-color: #E2DED5;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+/* no underlines, no hyperlink color */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ensures links don't change colors after click */
+a:visited {
+  color: black;
+}
+
+/* 3 column grid - nav - rotating logo - time, see below for mobile */
+.grid {
+  display: grid;
+  /* controls size of grid elements */
+  grid-template-columns: 15% 70% 15%;
+  position: relative;
+  /*controls how much space grid occupies */
+  height: 75%;
+  width: 75%;
+  top: 10%;
+  margin: 0 auto;
+}
+
+/* hide navigation when not in mobile view */
+ul {
+  display: none;
+}
+
+/* 1st column, left navigation */
+
+/* left nav items */
+.nav {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* youtube text position */
+.yo {
+  font-family: Arial;
+  font-size: 10px;
+  position: absolute;
+  top: 25.5%;
+  left: 90%;
+  z-index: 10;
+}
+
+/* contact text position */
+.co {
+  font-family: Arial;
+  font-size: 10px;
+  position: absolute;
+  top: 44.5%;
+  left: 90%;
+  z-index: 10;
+}
+
+/* artist text position */
+.ar {
+  font-family: Arial;
+  font-size: 10px;
+  position: absolute;
+  top: 62%;
+  left: 90%;
+  z-index: 10;
+}
+
+/* about text position */
+.ab {
+  font-family: Arial;
+  font-size: 10px;
+  position: absolute;
+  top: 78%;
+  left: 90%;
+  z-index: 10;
+}
+
+/* home text position */
+.ho {
+  font-family: Arial;
+  font-size: 10px;
+  position: absolute;
+  top: 92%;
+  left: 90%;
+  z-index: 10;
+}
+
+/* rotate for navigation (column 1) (-90 degrees) */
+.rotate {
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+/* 2nd column, information */
+
+/* black border around 2nd column*/
+.info {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  position: absolute;
+
+}
+
+/* container for video */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* logo stuff */
+.fbimage {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20%;
+  width: 20%;
+}
+
+/* horizontal centering and
+ fit image in div*/
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* third column, timer */
+
+/* time column set up */
+.time {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* time text position */
+.ti {
+  font-family: Arial;
+  font-size: 10px;
+  position: absolute;
+  top: 8%;
+  left: 15%;
+  z-index: 10;
+}
+
+/* rotate for right - time - (90 degrees) */
+.clockwise {
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  transform:  translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+/* aboutpage */
+
+/* for text */
+#aboutpage #border {
+  width: 59%;
+	height: 55%;
+	top: 38%;
+	margin: 0 auto;
+	position: relative;
+  font-family: Arial;
+  font-weight: Regular;
+  overflow-y: auto;
+}
+
+/* artistpage */
+
+/* main div */
+#artistpage #border {
+  width: 80%;
+	height: 55%;
+	top: 38%;
+	margin: 0 auto;
+	position: relative;
+  font-family: Arial;
+  font-weight: Regular;
+  overflow-y: auto;
+}
+
+/* left column for artists */
+#left {
+  left: 14%;
+  width: 35%;
+  position: absolute;
+  overflow-x: auto;
+  overflow-y: auto;
+  overflow: hidden;
+}
+
+/* right column for artists */
+#right {
+  width: 35%;
+  left: 54%;
+  position: absolute;
+  overflow-x: auto;
+  overflow-y: auto;
+  overflow: hidden;
+}
+
+/* mobile responsiveness */
+@media only screen and (max-width: 1300px) {
+
+  /* 3 row grid - nav - rotating logo - time, see below for mobile */
+  .grid {
+    /* controls size of grid elements */
+    grid-template-rows: 10% 80% 10%;
+    position: relative;
+    /*controls how much space grid occupies */
+    height: 80%;
+    width: 90%;
+    margin-top: -2%;
+  }
+
+  /* navigation */
+  .nav {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  /* navigation list */
+  ul {
+    display: inline;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  /* list elements characteristics */
+  li {
+    display: inline;
+    padding-right: 2rem;
+    font-family: Arial;
+    font-size: 1.7vw;
+    font-weight: bold;
+  }
+
+  /* black border */
+  .info {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  /* logo image */
+  .fbimage {
+    position: fixed;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+    width: 20%;
+  }
+
+  /* time grid set up */
+  .time {
+      grid-row-start: 3;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 4;
+  }
+
+  /* individual nav elements hidden in mobile view */
+  /* youtube text position */
+  .yo {
+    display: none;
+  }
+
+  /* contact text position */
+  .co {
+    display: none;
+  }
+
+  /* artist text position */
+  .ar {
+    display: none;
+  }
+
+  /* about text position */
+  .ab {
+    display: none;
+  }
+
+  /* home text position */
+  .ho {
+    display: none;
+  }
+
+  .ti {
+    font-family: Arial;
+    font-size: 1.1vw;
+    position: absolute;
+    left: 85%;
+  }
+
+  /* rotation of timer is set to 0 in mobile view */
+  .clockwise {
+    -moz-transform: translateX(0) translateY(0) rotate(0);
+    -webkit-transform: translateX(0) translateY(0) rotate(0);
+    transform:  translateX(0) translateY(0) rotate(0);
+  }
+
+  /* contactpage outer div */
+  #form-main{
+  	width: 80%;
+  	height: 57%;
+  	top: 34%;
+  	margin: 0 auto;
+  	position: relative;
+    font-family: Arial;
+    font-weight: Regular;
+  }
+
+  /* contactpage inner div */
+  #form-div {
+  	padding-left:35px;
+  	padding-right:35px;
+  	padding-bottom: 5%;
+  	width: 68%;
+  	height: 70%;
+  	margin: 0 auto;
+  	position: absolute;
+  	font-family: Arial;
+  }
+
+}
+
+/* fonts */
+@font-face {
+  font-family: Museo-Sans;
+  src: url("./MuseoSans_500.otf");
+}
